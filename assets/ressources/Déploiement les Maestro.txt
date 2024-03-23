@@ -1,0 +1,34 @@
+Guide de déploiement de projet Maestro de Symfony
+
+Ce guide vous explique comment déployer votre projet Maestro Symfony sur un serveur en utilisant un script de déploiement. Assurez-vous de suivre attentivement chaque étape pour garantir un déploiement réussi.
+
+1. Accès au serveur :
+   Assurez-vous d'avoir accès au serveur sur lequel vous souhaitez déployer votre application Symfony. Vous aurez besoin des informations suivantes :
+   - Nom d'utilisateur et adresse IP du serveur
+   - Chemin du répertoire web sur le serveur où vous souhaitez déployer l'application
+2. Configuration du script de déploiement :
+   - Ouvrez le fichier `deploy.sh` que vous avez enregistré dans le répertoire racine de votre projet Symfony.
+   - Remplacez les valeurs des variables suivantes par les informations spécifiques à votre environnement :
+     - SERVER_USERNAME : Nom d'utilisateur du serveur
+     - SERVER_IP : Adresse IP du serveur
+     - WWW_DIR : Chemin du répertoire web sur le serveur
+     - SYMFONY_CONSOLE : Chemin vers la console Symfony
+   - Enregistrez les modifications apportées au script.
+3. Autorisation d'exécution du script :
+   - Assurez-vous que le script `deploy.sh` a les autorisations d'exécution. Vous pouvez les définir en utilisant la commande suivante dans votre terminal :
+     ```
+     chmod +x deploy.sh
+     ```
+4. Exécution du script de déploiement :
+   - Ouvrez un terminal et accédez au répertoire où se trouve votre script `deploy.sh`.
+   - Exécutez le script en utilisant la commande suivante :
+     ```
+     ./deploy.sh
+     ```
+   - Le script commencera à déployer votre application Symfony sur le serveur.
+5. Vérification du déploiement :
+   - Une fois le script terminé, accédez à votre application en utilisant l'adresse du serveur dans un navigateur web.
+   - Vérifiez que l'application fonctionne correctement et que toutes les fonctionnalités sont opérationnelles.
+6. Maintenance et suivi :
+   - Après le déploiement initial, assurez-vous de surveiller régulièrement votre application pour détecter tout problème éventuel.
+   - En cas de mise à jour du code ou de modification de la configuration, vous pouvez réexécuter le script de déploiement pour déployer les changements sur le serveur.
